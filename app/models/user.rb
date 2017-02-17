@@ -8,3 +8,5 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}
 end
+
+# valides is a method that just makes sure things have been entered
