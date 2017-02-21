@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create #how to do I create a user through the form. Take input variable -> put into database
   	@user = User.new(user_params)
   	if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App"
   		redirect_to @user
   	else 
